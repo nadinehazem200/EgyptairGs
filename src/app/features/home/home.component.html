@@ -1,0 +1,19 @@
+<app-hero></app-hero>
+
+@defer (on idle) {
+  <app-services></app-services>
+} @placeholder {
+  <div style="height: 400px; background: #e8e8e8;"></div>
+}
+
+@defer (on idle) {
+  <app-customers></app-customers>
+} @placeholder {
+  <div style="height: 400px; background: #fff;"></div>
+}
+
+@defer (on idle) {
+  <app-contact></app-contact>
+} @placeholder {
+  <div style="height: 400px; background: #e8e8e8;"></div>
+}

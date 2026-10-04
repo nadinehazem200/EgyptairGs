@@ -1,0 +1,35 @@
+<div class="aero-metal-container">
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1 class="main-title">Aero Metal Services</h1>
+        
+        <div class="description">
+          <p>EGYPTAIR GROUND SERVICES AERO METAL have the capability to manufacture and repair Ground Support non-motorized Equipment.</p>
+          <p>Improving all manufacturing and maintenance operations by re-construction for all workshops and buildings, installing new machines and equipments frequently to achieve the required quality for the products according to international standards.</p>
+        </div>
+
+        <div class="back-button">
+          <button routerLink="/" class="btn-home">← Back to Home</button>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image">
+        <img src="assets/our-customers/AM-Services.jpg" alt="Aero Metal" />
+      </div>
+    </div>
+
+    <!-- Goals Section -->
+    <div class="services-section">
+      <h2 class="section-title">Our Goals</h2>
+
+      <ul class="services-list">
+        <li *ngFor="let goal of goals">
+          {{ goal }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

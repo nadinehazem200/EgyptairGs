@@ -1,0 +1,34 @@
+<div class="baggage-container">
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <!-- العنوان الرئيسي -->
+        <h1 class="main-title">Baggage Handling</h1>
+        
+        <!-- النص الوصفي -->
+        <div class="description">
+          <p>As a ground handling service provider, we at EGS understand the importance of providing reliable, efficient and safe baggage handling services in building strong relationships with our customers, and, in turn, passengers.</p>
+        </div>
+
+        <!-- زر العودة إلى الرئيسية (اختياري) -->
+        <div class="back-button">
+          <button routerLink="/" class="btn-home">← Back to Home</button>
+        </div>
+      </div>
+
+      <!-- صورة الحقائب -->
+      <div class="hero-image">
+        <img src="/assets/our-customers/Bags.png" alt="Baggage Handling" />
+      </div>
+    </div>
+
+    <!-- قسم الخدمات -->
+    <div class="services-section">
+      <h2 class="section-title">Our Services Include</h2>
+      <ul class="services-list">
+        <li *ngFor="let service of servicesList">{{ service }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

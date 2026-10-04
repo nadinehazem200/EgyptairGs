@@ -1,0 +1,239 @@
+.passenger-services-container {
+  background: #f4f7fb;
+  min-height: 100vh;
+  margin-top: 90px;
+  padding: 60px 20px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 70px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  object-fit: cover;
+  transition: .4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Carousel */
+
+.hero-image-carousel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.carousel-image {
+  width: 100%;
+  display: block;
+  border-radius: 25px;
+  object-fit: cover;
+  animation: fadeIn .5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,.5);
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,.8);
+}
+
+.carousel-btn-prev {
+  left: 15px;
+}
+
+.carousel-btn-next {
+  right: 15px;
+}
+
+/* Indicators */
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: rgba(255,255,255,.5);
+  cursor: pointer;
+}
+
+.indicator.active {
+  width: 30px;
+  border-radius: 6px;
+  background: white;
+}
+
+/* Titles */
+
+.main-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #0d2d62;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0d2d62;
+  margin-bottom: 25px;
+}
+
+/* Description */
+
+.description p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+
+.services-section {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list li {
+  background: #eef4ff;
+  margin-bottom: 15px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0d2d62;
+
+  /* Makes them look like plain information instead of buttons */
+  cursor: default;
+  user-select: none;
+}
+
+/* No hover animation */
+.services-list li:hover {
+  background: #eef4ff;
+  color: #0d2d62;
+  transform: none;
+}
+
+/* Button */
+
+.back-button {
+  margin-top: 35px;
+}
+
+.btn-home {
+  background: linear-gradient(135deg,#3b82f6,#2563eb);
+  color: white;
+  border: none;
+  padding: .75rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-home:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width:900px){
+
+.hero-section{
+flex-direction:column;
+}
+
+.main-title{
+font-size:40px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.description p{
+font-size:16px;
+}
+
+}

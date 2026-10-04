@@ -1,0 +1,233 @@
+/* -------------------------------
+   1️⃣ BASE SECTION
+------------------------------- */
+.contact-section {
+  background: #f8fafc; /* لون رمادي فاتح جداً يفصل السكشن */
+  padding: 100px 20px;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography (نفس الاستايل الموحد) */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a3a6b;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* -------------------------------
+   2️⃣ MAIN LAYOUT (CSS GRID)
+------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* عمودين قد بعض */
+  gap: 50px;
+  align-items: stretch;
+}
+
+.map-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  margin-bottom: 25px;
+}
+
+.col-title {
+  font-size: 1.5rem;
+  color: #1a3a6b;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.col-sub {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* -------------------------------
+   3️⃣ MAP STYLING (Left Column)
+------------------------------- */
+.map-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  flex: 1;
+  min-height: 400px;
+}
+
+.map-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.map-wrapper:hover img {
+  transform: scale(1.03); /* زووم خفيف وشيك للصورة */
+}
+
+/* -------------------------------
+   4️⃣ DEPARTMENTS CARDS (Right Column)
+------------------------------- */
+.departments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.dept-card {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #edf2f7;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* خط أزرق بيظهر من الجنب في الـ Hover */
+.dept-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #1a3a6b;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dept-card:hover {
+  transform: translateX(5px); /* حركة لليمين بسيطة */
+  box-shadow: 0 10px 25px rgba(26, 58, 107, 0.1);
+  border-color: #cbd5e1;
+}
+
+.dept-card:hover::before {
+  opacity: 1;
+}
+
+/* أيقونة القسم */
+.dept-icon {
+  width: 50px;
+  height: 50px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* عشان الأيقونة متصغرش */
+}
+
+.dept-icon i {
+  font-size: 20px;
+  color: #1a3a6b;
+}
+
+.dept-card:hover .dept-icon {
+  background: #1a3a6b;
+}
+.dept-card:hover .dept-icon i {
+  color: #ffffff;
+}
+
+/* نصوص بيانات القسم */
+.dept-details h5 {
+  margin: 0 0 15px 0;
+  font-size: 1.15rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.dept-details p {
+  margin: 0 0 10px 0;
+  color: #475569;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dept-details p:last-child {
+  margin-bottom: 0;
+}
+
+.dept-details p i {
+  color: #94a3b8;
+  font-size: 14px;
+  width: 16px; /* توحيد مساحة الأيقونات عشان النص يبقى محاذي لبعضه */
+  text-align: center;
+}
+
+.dept-details a {
+  color: #1a3a6b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.dept-details a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.divider {
+  color: #cbd5e1;
+  margin: 0 5px;
+}
+
+/* -------------------------------
+   5️⃣ RESPONSIVE (الموبايل)
+------------------------------- */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* كله تحت بعضه */
+    gap: 40px;
+  }
+  
+  .dept-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dept-card {
+    flex-direction: column; /* الأيقونة تبقى فوق النص في الشاشات الصغيرة جداً */
+    gap: 15px;
+  }
+  
+  .dept-icon {
+    width: 45px;
+    height: 45px;
+  }
+}

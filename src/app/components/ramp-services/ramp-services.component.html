@@ -1,0 +1,36 @@
+<div class="ramp-container">
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1 class="main-title">Ramp Services</h1>
+        
+        <div class="description">
+          <p>Airlines require rapid and precise turnaround times to meet their schedules and maximize the economic viability of their operations.</p>
+          <p>To maintain the aircraft in a safe and airworthy condition, the mechanical sophistication of aircraft systems demands highly trained and experienced teams of specialist personnel and equipment.</p>
+          <p>By owning the right manpower and facilities, EGS maintains the highest standards of operation to complete the numerous overlapping service processes on time, and to fit these required standards to the schedules of our airline customers.</p>
+        </div>
+
+        <div class="back-button">
+          <button routerLink="/" class="btn-home">← Back to Home</button>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image">
+        <img src="/assets/ramp1.jpg" alt="Ramp Services" />
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services-section">
+      <h2 class="section-title">Our Services Include</h2>
+
+      <ul class="services-list">
+        <li *ngFor="let service of servicesList">
+          {{ service }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

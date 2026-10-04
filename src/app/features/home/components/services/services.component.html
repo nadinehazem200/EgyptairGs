@@ -1,0 +1,21 @@
+<section 
+  class="services-section services" 
+  #servicesSection 
+  [class.section-visible]="isSectionVisible" id="services" >
+  
+  <div class="services-inner services">
+    <h2 class="section-title">SERVICES</h2>
+  <h4 class="section-desc">
+  EGYPTAIR GROUND SERVICES provides competent station management and trained, uniformed
+  courteous ramp personnel to meet our customers needs...
+</h4>
+    <div class="services-grid">
+      <div class="service-card services" *ngFor="let s of services" (click)="navigateToService(s.title)" [style.cursor]="'pointer'">
+        <div class="icon-circle">
+          <i [class]="s.iconClass"></i>
+        </div>
+        <p class="service-title">{{ s.title }}</p>
+      </div>
+    </div>
+  </div>
+</section>

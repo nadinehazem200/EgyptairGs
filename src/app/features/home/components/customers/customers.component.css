@@ -1,0 +1,157 @@
+/* -------------------------------
+   1️⃣ BASE SECTION
+------------------------------- */
+.customers-section {
+  background: #ffffff; /* لون أبيض نقي يفصل عن السكشن اللي قبله */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.customers-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------------
+   2️⃣ TYPOGRAPHY (نفس روح السكشن اللي فات)
+------------------------------- */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a3a6b;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+
+/* -------------------------------
+   3️⃣ LOGOS GRID
+------------------------------- */
+.logos-grid {
+  display: grid;
+  /* Grid متجاوب تلقائياً يعرض أكبر عدد ممكن جنب بعض */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+/* -------------------------------
+   4️⃣ LOGO CARDS & HOVER EFFECTS
+------------------------------- */
+.logo-card {
+  background: #ffffff; /* خلفية بيضاء عشان تنطق ألوان اللوجوهات */
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
+  padding: 20px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* ظل خفيف جداً في الحالة العادية */
+  cursor: pointer;
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* الألوان طبيعية 100% من البداية */
+  filter: none; 
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+/* التأثير عند مرور الماوس */
+.logo-card:hover {
+  background: #ffffff;
+  /* تغيير لون الحدود للون مصر للطيران عند الوقوف عليه */
+  border-color: #1a3a6b; 
+  transform: translateY(-8px); /* حركة رفع للأعلى */
+  box-shadow: 0 15px 30px rgba(26, 58, 107, 0.1); /* ظل أعمق يعطي إحساس بالارتفاع */
+}
+
+.logo-card:hover img {
+  transform: scale(1.1); /* تكبير اللوجو حاجة بسيطة */
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+/* -------------------------------
+   5️⃣ BUTTON STYLING
+------------------------------- */
+.action-container {
+  display: flex;
+  justify-content: center;
+}
+
+.more-btn {
+  background: transparent;
+  color: #1a3a6b;
+  border: 2px solid #1a3a6b;
+  padding: 12px 35px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #1a3a6b;
+  color: white;
+}
+/* -------------------------------
+   6️⃣ RESPONSIVE TWEAKS
+------------------------------- */
+@media (max-width: 768px) {
+  .customers-section { padding: 60px 20px; }
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr); /* كارتين جنب بعض في الموبايل */
+    gap: 15px;
+  }
+  .logo-card { height: 100px; padding: 15px; }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column; /* تحويل الصف لعمود */
+    align-items: center;    /* توسيط الكروت */
+    overflow-x: hidden;     /* إلغاء السحب الأفقي */
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;           /* الكارت ياخد عرض الشاشة */
+    max-width: 300px;      /* عشان ميبقاش عريض بزيادة */
+    flex: 1 1 auto;
+    scroll-snap-align: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-grid {
+    /* رقم 1 هنا معناه عمود واحد فقط */
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .logo-card {
+    height: 120px;
+    width: 100%;
+    max-width: 280px; /* اختياري: عشان اللوجو ميبقاش ضخم جداً */
+    margin: 0 auto;  /* لتوسيط الكارت في نص الشاشة */
+  }
+}

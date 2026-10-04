@@ -1,0 +1,78 @@
+<div class="passenger-services-container">
+  <div class="content-wrapper">
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1 class="main-title">Passenger Services</h1>
+
+        <div class="description">
+          <p>Hospitality is deeply ingrained in the EgyptAir culture.</p>
+
+          <p>
+            As the national ground-handling service provider, EGS considers
+            interactions between passengers and staff to be very important.
+          </p>
+          <p>
+            We always remember that we never get a second chance to make a first impression.
+          </p>
+
+          <p>
+            Meeting the passenger's needs before or after a flight drives what we do.
+            We are proud to deliver world-class services to over 88 million travellers a year.
+          </p>
+        </div>
+
+        <div class="back-button">
+          <button routerLink="/" class="btn-home">
+            ← Back to Home
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel Hero Image -->
+      <div class="hero-image-carousel">
+        <div class="carousel-container">
+          <img
+            [src]="carouselImages[currentImageIndex]"
+            alt="Passenger"
+            class="carousel-image"
+          />
+          
+          <!-- Left Arrow -->
+          <button class="carousel-btn carousel-btn-prev" (click)="previousImage()" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          
+          <!-- Right Arrow -->
+          <button class="carousel-btn carousel-btn-next" (click)="nextImage()" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              *ngFor="let img of carouselImages; let i = index"
+              class="indicator"
+              [class.active]="i === currentImageIndex"
+              (click)="currentImageIndex = i"
+              [attr.aria-label]="'Go to image ' + (i + 1)"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services-section">
+      <h2 class="section-title">Our Services</h2>
+
+      <ul class="services-list">
+        <li *ngFor="let service of servicesList">
+          {{ service }}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

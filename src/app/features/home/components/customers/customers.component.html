@@ -1,0 +1,15 @@
+<section class="customers-section" id="customers">
+  <div class="customers-inner">
+    <h2 class="section-title">OUR CUSTOMERS</h2>
+    <h4 class="section-desc">
+      EGYPTAIR GROUND SERVICES helps customers make smart decisions regarding Light and Heavy Maintenance. 
+      We have gained the trust of more than 99 customers worldwide.
+    </h4>
+
+    <div class="logos-grid">
+      <div class="logo-card" *ngFor="let c of visibleCustomers">
+        <img [src]="c.logo" [alt]="c.name" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

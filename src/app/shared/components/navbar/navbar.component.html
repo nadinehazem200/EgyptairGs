@@ -1,0 +1,33 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a routerLink="/">
+        <img src="/assets/EgyptAirLogo.png" alt="Logo" style="height: 45px; margin-right: 100px;">
+      </a>
+    </div>
+    
+    <div class="menu-icon" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-menu" [class.active]="menuOpen">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="closeMenu()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollToServices()">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollToCustomers()">Our Customers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollToContact()">Contact Us</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/feedback" (click)="closeMenu()">Your Feedback</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+<div class="hero-slider">
+
+  <div
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="currentSlide === i"
+    [style.backgroundImage]="'url(' + slide.image + ')'"
+  >
+    <!-- <div class="slide-content">
+      <h2>{{ slide.title }}</h2>
+      <p>{{ slide.description }}</p>
+      <a href="#" class="btn-slide">
+        Explore <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div> -->
+
+  <div class="slider-controls">
+    <div class="slider-dots">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="currentSlide === i"
+        (click)="goToSlide(i)"
+      ></span>
+    </div>
+  </div>
+
+  <div class="progress-timer" [style.width.%]="progressPercent"></div>
+
+</div>

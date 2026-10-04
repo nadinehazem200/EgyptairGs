@@ -1,0 +1,34 @@
+<div class="cargo-container">
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1 class="main-title">Cargo Services</h1>
+        
+        <div class="description">
+          <p>EGS handles the supervision, loading, unloading and transportation of general cargo and special cargo with its own supply of specialized equipment and specially trained staff.</p>
+        </div>
+
+        <div class="back-button">
+          <button routerLink="/" class="btn-home">← Back to Home</button>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image">
+        <img src="assets/cargo.jpg" alt="Cargo Services" />
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services-section">
+      <h2 class="section-title">Our Services Include</h2>
+
+      <ul class="services-list">
+        <li *ngFor="let service of additionalServices">
+          {{ service }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

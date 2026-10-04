@@ -1,0 +1,160 @@
+.workshops-page {
+  background: #efefef;
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header h1 {
+  font-size: 72px;
+  color: #17357b;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.header p {
+  color: #17357b;
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+/* Back Button */
+
+.back-button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.btn-home {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Professional blue hover */
+
+.btn-home:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* Button click effect */
+
+.btn-home:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.2);
+}
+
+/* Sections */
+
+.section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 70px;
+  align-items: flex-start;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-box {
+  flex: 1;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 6px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+}
+
+.text-box {
+  flex: 1;
+}
+
+.text-box h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.text-box p,
+.text-box li {
+  color: #17357b;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.other-workshops {
+  margin-top: 40px;
+}
+
+.other-workshops h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.workshop-item {
+  margin-bottom: 30px;
+}
+
+.workshop-item h3 {
+  font-size: 28px;
+  color: #17357b;
+  margin-bottom: 10px;
+}
+
+.workshop-item p {
+  font-size: 22px;
+  color: #17357b;
+  line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+  .section,
+  .reverse {
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 48px;
+  }
+
+  .header p {
+    font-size: 18px;
+  }
+
+  .text-box p,
+  .text-box li,
+  .workshop-item p {
+    font-size: 18px;
+  }
+
+  .back-button {
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+}
