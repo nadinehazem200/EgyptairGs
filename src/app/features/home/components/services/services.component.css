@@ -64,10 +64,12 @@
 /* Grid – 5 columns on large screens */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
   justify-items: center;
   align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* Card styling */
@@ -133,17 +135,21 @@
 /* Responsive */
 @media (max-width: 1100px) {
   .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
   }
+
   .service-card {
-    max-width: 200px;
+    max-width: 220px;
     height: 210px;
   }
+
   .icon-circle {
     width: 70px;
     height: 70px;
     font-size: 1.8rem;
   }
+
   .service-title {
     font-size: 0.9rem;
   }
@@ -162,23 +168,27 @@
 
 @media (max-width: 650px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
   }
+
   .section-title {
     font-size: 2rem;
   }
+
   .service-card {
     max-width: 180px;
     height: 190px;
     padding: 16px;
   }
+
   .icon-circle {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
     margin-bottom: 12px;
   }
+
   .service-title {
     font-size: 0.85rem;
   }
@@ -189,6 +199,7 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .service-card {
     max-width: 240px;
     height: 200px;

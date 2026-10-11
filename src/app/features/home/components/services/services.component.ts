@@ -11,16 +11,14 @@ import { ActivatedRoute, Router } from '@angular/router'; // 1. استيراد �
 })
 export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
   services = [
-    { title: 'Passenger Services', iconClass: 'fas fa-chart-line' },
-    { title: 'Baggage Handling', iconClass: 'fas fa-database' },
-    { title: 'Ramp Services', iconClass: 'fas fa-cloud' },
-    { title: 'Cargo Services', iconClass: 'fas fa-headphones' },
-    { title: 'Fleet Solutions', iconClass: 'fas fa-wrench' },
-    { title: 'Traffic Control', iconClass: 'fas fa-server' },
-    { title: 'Load Control', iconClass: 'fab fa-html5' },
- { title: 'About Aero Metal', iconClass: 'fas fa-industry' },
-    { title: 'Aero Metal Services', iconClass: 'fas fa-cogs' },
-    { title: 'Aero Metal Workshops', iconClass: 'fas fa-hard-hat' },
+    { title: 'Passenger Services', iconClass: 'fa-solid fa-plane-departure' },
+    { title: 'Baggage Handling', iconClass: 'fa-solid fa-people-carry-box' },
+    { title: 'Ramp Services', iconClass: 'fa-solid fa-truck-ramp-box' },
+    { title: 'Cargo Services', iconClass: 'fa-solid fa-truck' },
+    { title: 'Fleet Solutions', iconClass: 'fa-solid fa-truck-plane' },
+    { title: 'Traffic Control', iconClass: 'fa-solid fa-traffic-light' },
+    { title: 'Load Control', iconClass: 'fa-regular fa-hourglass' },
+    { title: 'Aero Metal Workshops', iconClass: 'fa-solid fa-hammer'},
   ];
 
   @ViewChild('servicesSection') servicesSection!: ElementRef<HTMLElement>;
@@ -97,9 +95,6 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
         break;
       case 'Load Control':
         this.router.navigate(['/load-control']);
-        break;
-      case 'About Aero Metal':
-        this.router.navigate(['/aero-metal']);
         break;
       case 'Aero Metal Services':
         this.router.navigate(['/aero-metal-services']);

@@ -9,10 +9,9 @@ import { CargoServicesComponent } from './components/cargo-services/cargo-servic
 import { FleetSolutionsComponent } from './components/fleet-solutions/fleet-solutions.component';
 import { TrafficControlComponent } from './components/traffic-control/traffic-control.component';
 import { LoadControlComponent } from './components/load-control/load-control.component';
-import { AeroMetalComponent } from './components/aero-metal/aero-metal.component';
-import { AeroMetalServicesComponent } from './components/aero-metal-services/aero-metal-services.component';
 import { AeroMetalWorkshopsComponent } from './components/aero-metal-workshops/aero-metal-workshops.component';
 import { OurCostomersComponent } from './our-costomers/our-costomers.component';
+import { AboutUsComponent } from './features/about-us/about-us.component';
 
 
 export const routes: Routes = [
@@ -29,9 +28,7 @@ export const routes: Routes = [
   { path: 'fleet-solutions', component: FleetSolutionsComponent },
   { path: 'traffic-control', component: TrafficControlComponent },
   { path: 'load-control', component: LoadControlComponent },
-  { path: 'aero-metal', component: AeroMetalComponent },
-   
-  { path: 'aero-metal-services', component: AeroMetalServicesComponent },
+  {path:'about-us', component: AboutUsComponent},
   { path: 'aero-metal-workshops', component: AeroMetalWorkshopsComponent },
   { path: '**', redirectTo: '' }
 
