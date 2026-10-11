@@ -12,10 +12,15 @@ import { LoadControlComponent } from './components/load-control/load-control.com
 import { AeroMetalComponent } from './components/aero-metal/aero-metal.component';
 import { AeroMetalServicesComponent } from './components/aero-metal-services/aero-metal-services.component';
 import { AeroMetalWorkshopsComponent } from './components/aero-metal-workshops/aero-metal-workshops.component';
+import { OurCostomersComponent } from './our-costomers/our-costomers.component';
 
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  {
+  path: 'our-costomers',
+  component: OurCostomersComponent
+},
   { path: 'feedback', component: FeedbackFormComponent },
   { path: 'passenger-services', component: PassengerServicesComponent },
   { path: 'baggage-handling', component: BaggageHandlingComponent },
@@ -25,6 +30,7 @@ export const routes: Routes = [
   { path: 'traffic-control', component: TrafficControlComponent },
   { path: 'load-control', component: LoadControlComponent },
   { path: 'aero-metal', component: AeroMetalComponent },
+   
   { path: 'aero-metal-services', component: AeroMetalServicesComponent },
   { path: 'aero-metal-workshops', component: AeroMetalWorkshopsComponent },
   { path: '**', redirectTo: '' }

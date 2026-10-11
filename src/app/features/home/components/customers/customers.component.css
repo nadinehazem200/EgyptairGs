@@ -1,6 +1,8 @@
 /* -------------------------------
    1️⃣ BASE SECTION
 ------------------------------- */
+
+
 .customers-section {
   background: #ffffff; /* لون أبيض نقي يفصل عن السكشن اللي قبله */
   padding: 100px 20px;
@@ -113,6 +115,35 @@
   background: #1a3a6b;
   color: white;
 }
+
+
+.more-btn {
+  background: linear-gradient(135deg, #17357b, #2856a8);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: 0.3s ease;
+}
+
+.more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(23, 53, 123, 0.25);
+}
+
+.more-btn span {
+  font-size: 18px;
+}
+
+
 /* -------------------------------
    6️⃣ RESPONSIVE TWEAKS
 ------------------------------- */

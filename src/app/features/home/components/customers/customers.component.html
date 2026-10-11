@@ -10,6 +10,9 @@
       <div class="logo-card" *ngFor="let c of visibleCustomers">
         <img [src]="c.logo" [alt]="c.name" loading="lazy" />
       </div>
-    </div>
+    </div><button class="more-btn" routerLink="/our-costomers">
+  More
+  <span>→</span>
+</button>
   </div>
 </section>

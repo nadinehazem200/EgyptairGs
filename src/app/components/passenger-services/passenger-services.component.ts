@@ -13,7 +13,7 @@ export class PassengerServicesComponent {
   // Carousel Images
   carouselImages: string[] = [
     'assets/passengers.jpg',
-    '/assets/Transportation.jpg'
+    'assets/Transportation.jpg'
   ];
   
   currentImageIndex: number = 0;

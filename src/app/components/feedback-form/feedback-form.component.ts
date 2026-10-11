@@ -77,7 +77,7 @@ export class FeedbackFormComponent implements OnInit {
         console.error('Error Message:', err?.message);
         
         if (err?.status === 0) {
-          this.errorMessage = 'Cannot reach the server. Make sure the API is running on http://localhost:5245';
+          this.errorMessage = 'Please try again later';
         } else if (err?.error?.message) {
           this.errorMessage = err.error.message;
         } else {

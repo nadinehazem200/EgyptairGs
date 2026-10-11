@@ -1,0 +1,52 @@
+<section class="customers-section">
+
+  <div class="customers-container">
+
+    <div class="section-title">
+      <span>OUR CUSTOMERS</span>
+      <h2>Our Airline Customers</h2>
+      <p>
+        We are proud to provide ground handling services to a wide range
+        of leading airlines from around the world.
+      </p>
+    </div>
+
+    <div class="customers-grid">
+
+      <div
+        class="customer-card"
+        *ngFor="let customer of visibleCustomers">
+
+        <div class="logo-box">
+          <img
+            [src]="customer.logo"
+            [alt]="customer.name"
+          />
+        </div>
+
+        <p>{{ customer.name }}</p>
+
+      </div>
+
+    </div>
+
+    <!-- MORE BUTTON -->
+    <div class="more-container">
+
+      <button
+        class="more-btn"
+        (click)="toggleCustomers()">
+
+        {{ showAll ? 'Show Less' : 'More' }}
+
+        <span class="arrow">
+          {{ showAll ? '↑' : '↓' }}
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>

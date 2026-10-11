@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OurCostomersComponent } from '../../../../our-costomers/our-costomers.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-customers',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.css']
 })
@@ -31,4 +33,7 @@ export class CustomersComponent {
   get visibleCustomers() {
     return this.showAll ? this.allCustomers : this.allCustomers.slice(0, 3);
   }
+
+
+ 
 }
